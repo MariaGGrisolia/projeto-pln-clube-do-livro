@@ -1,0 +1,40 @@
+
+
+
+ANÁLISE PLN COMPLETA - CLÁSSICOS INTERNACIONAIS - RESUMO FINAL        
+
+CORPUS:
+
+• Documentos: 1200 (15 livros × 80 seções cada)
+• Vocabulário (Lemma): 97 palavras únicas
+• Vocabulário (Stem): 96 palavras únicas
+• Ganho com Lemmatização: -1 palavras reduzidas
+
+REQUISITOS ATENDIDOS:
+
+1. PRÉ-PROCESSAMENTO:
+   ✓ Tokenização
+   ✓ Normalização
+   ✓ Stopwords
+   ✓ STEMMING vs LEMMATIZAÇÃO (COMPARAÇÃO REALIZADA)
+   ✓ POS Tagging
+   ✓ Análise de impacto no vocabulário
+
+2. REPRESENTAÇÃO VETORIAL:
+   ✓ BoW (Bag of Words)
+   ✓ TF-IDF
+   ✓ Motor de busca com 3 queries testadas
+
+3. MODELAGEM:
+   ✓ LDA (Latent Dirichlet Allocation)
+   ✓ LSA (Latent Semantic Analysis)
+
+4. NER e GRAFO:
+   ✓ NER (Named Entity Recognition)
+   ✓ Grafo com 39 nós (>20 ✓)
+   ✓ Análise de centralidade (PageRank)
+
+5. VISUALIZAÇÃO:
+   ✓ 6 gráficos/visualizações
+   ✓ Síntese não-técnica (esta!)
+
