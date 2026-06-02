@@ -336,7 +336,6 @@ Universidade, 2026
 
 Este projeto demonstra que PLN é viável tecnicamente para construir sistemas inteligentes de recomendação de livros. Os algoritmos funcionam conforme esperado, com validações robustas de cada etapa.
 
-**Status:** PROJETO COMPLETO - Todos os requisitos atendidos
 
 ---
 
