@@ -398,7 +398,7 @@ print(" Salvo: 01_top_termos.png")
 
 # 11. NUVEM DE PALAVRA
 
-print("\n⏳ Gerando wordcloud...")
+print("\n Gerando wordcloud...")
 
 all_text = ' '.join(df['texto_lemma'])
 wordcloud = WordCloud(width=800, height=400, background_color='white', colormap='viridis').generate(all_text)
@@ -416,7 +416,7 @@ print(" Salvo: 02_wordcloud.png")
 
 # 12. NER - EXTRAÇÃO DE ENTIDADES
 
-print("\n⏳ Extraindo entidades...")
+print("\n Extraindo entidades...")
 
 all_entities = []
 for texto in df['texto'].head(50):  # Amostra
