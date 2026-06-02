@@ -308,21 +308,6 @@ results = recomendador.recomendar("adventure exploration", top_k=3)
 
 ---
 
-## Autor
-
-**Maria Glatthardt Grisolia**  
-Estudante de Pós-graduação em Inteligência Artificial e Machine Learning  
-Universidade, 2026
-
----
-
-## Contato
-
-- GitHub: [MariaGGrisolia](https://github.com/MariaGGrisolia)
-- Repositório: [projeto-pln-clube-do-livro](https://github.com/MariaGGrisolia/projeto-pln-clube-do-livro)
-
----
-
 ## Arquivos Importantes
 
 - **PLN_Pipeline_Completo.ipynb**: Notebook completo, rodável
@@ -336,7 +321,3 @@ Universidade, 2026
 
 Este projeto demonstra que PLN é viável tecnicamente para construir sistemas inteligentes de recomendação de livros. Os algoritmos funcionam conforme esperado, com validações robustas de cada etapa.
 
-
----
-
-*Última atualização: Junho de 2026*
