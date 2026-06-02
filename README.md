@@ -1,24 +1,25 @@
-# 📚 Análise PLN: Sistema de Recomendação Semântica para Clube do Livro
+# Análise PLN: Sistema de Recomendação Semântica para Clube do Livro
 
 **Autor:** Maria Glatthardt Grisolia  
-**Disciplina:** Sistemas Cognitivos - Linguagem Natural  
+**Programa:** Pós-graduação em Inteligência Artificial e Machine Learning  
+**Disciplina:** Processamento de Linguagem Natural  
 **Professor:** Fernando Guimarães Ferreira  
 **Data:** Junho de 2026
 
 ---
 
-## 🎯 Objetivo
+## Objetivo
 
 Validar que **Processamento de Linguagem Natural (PLN)** é tecnicamente viável para construir um **sistema inteligente de recomendação** de livros baseado em análise semântica.
 
 ### Pergunta de Pesquisa
 > "PLN consegue capturar temas literários e fazer recomendações semânticas confiáveis?"
 
-**Resposta:** ✅ **SIM** - Motor de busca obteve 100% de acurácia em testes
+**Resposta:** SIM - Motor de busca obteve 100% de acurácia em testes
 
 ---
 
-## 📊 Corpus
+## Corpus
 
 - **1.200+ documentos** (15 livros × 80 seções cada)
 - **15 clássicos internacionais** cobrindo 1603-1952
@@ -36,15 +37,15 @@ Validar que **Processamento de Linguagem Natural (PLN)** é tecnicamente viável
 
 ---
 
-## 📂 Estrutura do Repositório
+## Estrutura do Repositório
 
 ```
 projeto-pln-clube-do-livro/
-├── PLN_Pipeline_Completo.ipynb      # 📓 Notebook main (RODE ISSO!)
-├── main.py                          # 🐍 Script Python puro
-├── requirements.txt                 # 📦 Dependências
-├── RELATÓRIO_TÉCNICO.pdf            # 📄 Relatório completo
-├── SINTESE_PROJETO.txt              # 📝 Resumo rápido
+├── PLN_Pipeline_Completo.ipynb      # Notebook main (RODE ISSO!)
+├── main.py                          # Script Python puro
+├── requirements.txt                 # Dependências
+├── RELATÓRIO_TÉCNICO.pdf            # Relatório completo
+├── SINTESE_PROJETO.txt              # Resumo rápido
 │
 ├── Visualizações/
 │   ├── 00_comparacao_stem_lemma.png
@@ -59,53 +60,53 @@ projeto-pln-clube-do-livro/
 
 ---
 
-## ✅ Requisitos Atendidos
+## Requisitos Atendidos
 
-### 1️⃣ Pré-processamento
-- ✅ **Tokenização** (spaCy)
-- ✅ **Normalização** (minúsculas + acentos)
-- ✅ **Limpeza** (URLs, emails, números, pontuação)
-- ✅ **Stopwords** (NLTK + customizado)
-- ✅ **Stemming vs Lemmatização** (comparação realizada)
+### 1. Pré-processamento
+- Tokenização (spaCy)
+- Normalização (minúsculas + acentos)
+- Limpeza (URLs, emails, números, pontuação)
+- Stopwords (NLTK + customizado)
+- Stemming vs Lemmatização (comparação realizada)
   - Stemming: 96 palavras únicas
   - Lemmatização: 97 palavras únicas
   - Diferença: 1% (ambos equivalentes, escolhemos Lemmatização por interpretabilidade)
-- ✅ **POS Tagging** (75% NOUNs, indicando corpus descritivo)
+- POS Tagging (75% NOUNs, indicando corpus descritivo)
 
-### 2️⃣ Representação Vetorial
-- ✅ **BoW (Bag of Words)** - 1.200 docs × 100 features
-- ✅ **TF-IDF** - 1.200 docs × 100 features, ponderação por importância
-- ✅ **Motor de busca** implementado com similaridade de cosseno
-  - Busca 1 "adventure": Journey to the Center of the Earth ✓
-  - Busca 2 "love": Jane Eyre ✓
-  - Busca 3 "psychology": The Picture of Dorian Gray ✓
-  - **Acurácia: 100%**
+### 2. Representação Vetorial
+- BoW (Bag of Words) - 1.200 docs × 100 features
+- TF-IDF - 1.200 docs × 100 features, ponderação por importância
+- Motor de busca implementado com similaridade de cosseno
+  - Busca 1 "adventure": Journey to the Center of the Earth
+  - Busca 2 "love": Jane Eyre
+  - Busca 3 "psychology": The Picture of Dorian Gray
+  - Acurácia: 100%
 
-### 3️⃣ Modelagem
-- ✅ **LDA (Latent Dirichlet Allocation)**
+### 3. Modelagem
+- LDA (Latent Dirichlet Allocation)
   - 4 tópicos descobertos: Amor, Aventura, Independência, Transformação
   - Todos semanticamente interpretáveis
   - Alinhados com características reais dos livros
   
-- ✅ **LSA (Latent Semantic Analysis)**
+- LSA (Latent Semantic Analysis)
   - 4 componentes principais
   - 27.3% de variância explicada
   - Indica corpus multidimensional (apropriado para 7+ gêneros)
 
-### 4️⃣ NER + Grafo
-- ✅ **NER (Named Entity Recognition)** 
+### 4. NER + Grafo
+- NER (Named Entity Recognition) 
   - 143 entidades extraídas
   - Distribuição: 100 PRODUCT, 42 LAW, 1 DATE
   - Normalização de variações
   
-- ✅ **Grafo de Conhecimento**
-  - **39 nós** (15 livros + 15 autores + 9 gêneros)
-  - **30 arestas** (relacionamentos: escreve, pertence)
+- Grafo de Conhecimento
+  - 39 nós (15 livros + 15 autores + 9 gêneros)
+  - 30 arestas (relacionamentos: escreve, pertence)
   - Análise de centralidade com PageRank
   - Gêneros emergem como hubs principais
 
-### 5️⃣ Visualizações
-- ✅ 6 visualizações geradas:
+### 5. Visualizações
+- 6 visualizações geradas:
   1. Comparação Stemming vs Lemmatização
   2. Distribuição de POS Tags
   3. Top 20 Palavras Mais Frequentes
@@ -115,7 +116,7 @@ projeto-pln-clube-do-livro/
 
 ---
 
-## 🚀 Como Usar
+## Como Usar
 
 ### Opção 1: Jupyter Notebook (Recomendado)
 
@@ -138,7 +139,7 @@ python3 -m spacy download en_core_web_lg
 jupyter notebook PLN_Pipeline_Completo.ipynb
 ```
 
-Depois é só rodar as células uma por uma! 🎯
+Depois é só rodar as células uma por uma!
 
 ### Opção 2: Script Python Puro
 
@@ -146,16 +147,16 @@ Depois é só rodar as células uma por uma! 🎯
 python3 main.py
 ```
 
-Tempo esperado: **15-25 minutos**  
+Tempo esperado: 15-25 minutos  
 Outputs: Gráficos + SINTESE_PROJETO.txt
 
 ### Opção 3: Google Colab (Sem instalação!)
 
-[Abra no Colab](https://colab.research.google.com/) e copie o notebook `PLN_Pipeline_Completo.ipynb`
+Abra no Colab e copie o notebook PLN_Pipeline_Completo.ipynb
 
 ---
 
-## 💻 Dependências
+## Dependências
 
 ```
 pandas>=1.3.0
@@ -172,21 +173,21 @@ unidecode>=1.2.0
 
 ---
 
-## 📊 Resultados Principais
+## Resultados Principais
 
 | Componente | Resultado | Status |
 |---|---|---|
-| Corpus | 1.200 docs, 15 livros | ✅ Atende requisito ≥1.000 |
-| Vocabulário | 97 palavras únicas | ✅ Apropriado |
-| Tópicos (LDA) | 4 tópicos interpretáveis | ✅ Descoberta bem-sucedida |
-| Variância (LSA) | 27.3% em 4 componentes | ✅ Estrutura significativa |
-| Motor de busca | 3/3 buscas corretas | ✅ 100% acurácia |
-| NER | 143 entidades extraídas | ✅ Distribuição apropriada |
-| Grafo | 39 nós, 30 arestas | ✅ Significativo (>20 nós) |
+| Corpus | 1.200 docs, 15 livros | Atende requisito ≥1.000 |
+| Vocabulário | 97 palavras únicas | Apropriado |
+| Tópicos (LDA) | 4 tópicos interpretáveis | Descoberta bem-sucedida |
+| Variância (LSA) | 27.3% em 4 componentes | Estrutura significativa |
+| Motor de busca | 3/3 buscas corretas | 100% acurácia |
+| NER | 143 entidades extraídas | Distribuição apropriada |
+| Grafo | 39 nós, 30 arestas | Significativo (>20 nós) |
 
 ---
 
-## 🎓 Metodologia
+## Metodologia
 
 ### Pipeline de Processamento
 
@@ -223,7 +224,7 @@ Visualizações & Análise
 
 ---
 
-## 📈 Interpretação dos Tópicos Descobertos
+## Interpretação dos Tópicos Descobertos
 
 ### Tópico 1: Amor e Relacionamentos
 - Palavras-chave: love, pursue, man, society, wealth
@@ -247,7 +248,7 @@ Visualizações & Análise
 
 ---
 
-## 🔍 Motor de Busca Semântico
+## Motor de Busca Semântico
 
 Implementado com similaridade de cosseno entre vetores TF-IDF:
 
@@ -262,7 +263,7 @@ results = recomendador.recomendar("adventure exploration", top_k=3)
 
 ---
 
-## ⚠️ Limitações
+## Limitações
 
 1. **Corpus pequeno**: 1.200 docs é para validação. Produção requer 100k+
 2. **Texto sintético**: Usamos sinopses em vez de texto completo (por copyright)
@@ -273,7 +274,7 @@ results = recomendador.recomendar("adventure exploration", top_k=3)
 
 ---
 
-## 🚀 Possíveis Melhorias
+## Possíveis Melhorias
 
 1. **Escalabilidade**: PySpark para processar 100k+ livros
 2. **Semântica fina**: Word2Vec/FastText para sinônimos
@@ -285,15 +286,15 @@ results = recomendador.recomendar("adventure exploration", top_k=3)
 
 ---
 
-## 📚 Referências
+## Referências
 
 ### Bibliotecas Utilizadas
-- **NLTK**: Natural Language Toolkit - tokenização, stemming, stopwords
-- **spaCy**: POS tagging, NER, lemmatização
-- **scikit-learn**: TF-IDF, SVD (LSA)
-- **Gensim**: LDA (modelagem de tópicos)
-- **NetworkX**: Análise de grafos e centralidade
-- **Matplotlib/WordCloud**: Visualizações
+- NLTK: Natural Language Toolkit - tokenização, stemming, stopwords
+- spaCy: POS tagging, NER, lemmatização
+- scikit-learn: TF-IDF, SVD (LSA)
+- Gensim: LDA (modelagem de tópicos)
+- NetworkX: Análise de grafos e centralidade
+- Matplotlib/WordCloud: Visualizações
 
 ### Conceitos PLN Aplicados
 - Tokenização
@@ -307,22 +308,22 @@ results = recomendador.recomendar("adventure exploration", top_k=3)
 
 ---
 
-## 👤 Autor
+## Autor
 
 **Maria Glatthardt Grisolia**  
-Estudante de Pós-graduação em Sistemas Cognitivos - Linguagem Natural  
-PUC-Rio, 2026
+Estudante de Pós-graduação em Inteligência Artificial e Machine Learning  
+Universidade, 2026
 
 ---
 
-## 📧 Contato
+## Contato
 
 - GitHub: [MariaGGrisolia](https://github.com/MariaGGrisolia)
 - Repositório: [projeto-pln-clube-do-livro](https://github.com/MariaGGrisolia/projeto-pln-clube-do-livro)
 
 ---
 
-## 📄 Arquivos Importantes
+## Arquivos Importantes
 
 - **PLN_Pipeline_Completo.ipynb**: Notebook completo, rodável
 - **RELATÓRIO_TÉCNICO.pdf**: Documentação técnica detalhada
@@ -331,11 +332,11 @@ PUC-Rio, 2026
 
 ---
 
-## 🎓 Conclusão
+## Conclusão
 
-Este projeto demonstra que **PLN é viável tecnicamente** para construir sistemas inteligentes de recomendação de livros. Os algoritmos funcionam conforme esperado, com validações robustas de cada etapa.
+Este projeto demonstra que PLN é viável tecnicamente para construir sistemas inteligentes de recomendação de livros. Os algoritmos funcionam conforme esperado, com validações robustas de cada etapa.
 
-**Status:** ✅ **PROJETO COMPLETO** - Todos os requisitos atendidos
+**Status:** PROJETO COMPLETO - Todos os requisitos atendidos
 
 ---
 
